@@ -1,0 +1,124 @@
+﻿<Window x:Class="Wpf_15.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_15"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="ScrollBar">
+            <Setter Property="Background" Value="#FF2D2D2D"/>
+        </Style>
+
+    </Window.Resources>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Dat\1.jpg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.2*"/>
+        </Grid.RowDefinitions>
+        <FlowDocumentScrollViewer x:Name="text" Padding="0,20,0,50" Margin="40,69,40,0" Grid.RowSpan="2">
+            <FlowDocument PagePadding="20,0,20,0">
+                <Paragraph FontSize="22" TextAlignment="Center" FontFamily="Lucida Console" Foreground="Black">
+                    <Bold>
+                        Победители Каннского кинофестиваля 2022 года</Bold>
+                </Paragraph>
+                <Paragraph FontFamily="Lucida Console">
+                    28 мая завершился 75-й Каннский кинофестиваль. «Золотую пальмовую ветвь» Каннского кинофестиваля 2022 года получил фильм шведского режиссера Рубена Эстлунда «Треугольник печали» – черная комедия с Вуди Харрельсоном в одной из главных ролей. Филип российского режиссера Кирилла Серебренникова «Жена Чайковского» остался без призов.
+                </Paragraph>
+                <List MarkerStyle="UpperRoman" FontFamily="Lucida Console">
+                    <ListItem>
+                        <Paragraph FontFamily="Lucida Console" FontWeight="Bold" >
+                            «Треугольник печали»
+                        </Paragraph>
+                        <Section FontFamily="Lucida Console">
+                            <List MarkerStyle="Disc" >
+                                <ListItem>
+                                    <Paragraph>Награда: «Золотая пальмовая ветвь»</Paragraph>
+                                </ListItem>
+                                <ListItem>
+                                    <Paragraph>Режиссер: Рубен Эстлунд</Paragraph>
+                                </ListItem>
+                                <ListItem>
+                                    <Paragraph>Актеры: Вуди Харрельсон, Харрис Дикинсон, Чарлби Дин Крик</Paragraph>
+                                </ListItem>
+                            </List>
+                        </Section>
+                        <Paragraph FontFamily="Lucida Console" >
+                            <Floater Width="250" HorizontalAlignment="Right">
+                                <BlockUIContainer>
+                                    <Image Source="Dat/file.jpg"/>
+                                </BlockUIContainer>
+                            </Floater>
+                            Роскошный корабль с миллиардерами и топ-моделями терпит крушение у берегов необитаемого острова. Пассажирам удается спастись, но единственный человек, который готов к экстремальным условиям, – это уборщица.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph FontFamily="Lucida Console" FontWeight="Bold" >
+                            «Близко»
+                        </Paragraph>
+                        <Section FontFamily="Lucida Console">
+                            <List MarkerStyle="Disc" >
+                                <ListItem>
+                                    <Paragraph>Награда: Гран-при</Paragraph>
+                                </ListItem>
+                                <ListItem>
+                                    <Paragraph>Режиссер: Лукас Дон</Paragraph>
+                                </ListItem>
+                                <ListItem>
+                                    <Paragraph>Актеры: Леа Дрюкер, Эмили Декенн, Кевин Янссенс</Paragraph>
+                                </ListItem>
+                            </List>
+                        </Section>
+                        <Paragraph FontFamily="Lucida Console" >
+                            <Floater Width="250" HorizontalAlignment="Right">
+                                <BlockUIContainer>
+                                    <Image Source="Dat/trailer-89926.jpg"/>
+                                </BlockUIContainer>
+                            </Floater>
+                            Тринадцатилетние Лео и Реми – друзья не разлей вода. Но однажды они сорятся – и крепко. Неожиданно для Реми, Лео обращается к его матери – за советом
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph FontFamily="Lucida Console" FontWeight="Bold" >
+                            «Полуденные звезды»
+                        </Paragraph>
+                        <Section FontFamily="Lucida Console">
+                            <List MarkerStyle="Disc" >
+                                <ListItem>
+                                    <Paragraph>Награда: Гран-при</Paragraph>
+                                </ListItem>
+                                <ListItem>
+                                    <Paragraph>Режиссер: Клер Дени</Paragraph>
+                                </ListItem>
+                                <ListItem>
+                                    <Paragraph>Актеры: Маргарет Куэлли, Джон Си Райли, Джо Элвин
+                                    </Paragraph>
+                                </ListItem>
+                            </List>
+                        </Section>
+                        <Paragraph FontFamily="Lucida Console" >
+                            <Floater Width="250" HorizontalAlignment="Right" >
+                                <BlockUIContainer>
+                                    <Image Source="Dat/2.jpg" />
+                                </BlockUIContainer>
+                            </Floater>
+                            Никарагуа, начало 2020-х. Загадочный английский бизнесмен и американская журналиста заводят роман, но вскоре эта пара попадает в крайне неприятную ситуацию. Молодые люди пытаются покинуть страну, однако это не так уж и просто.
+                        </Paragraph>
+                    </ListItem>
+                </List>
+            </FlowDocument>
+        </FlowDocumentScrollViewer>
+
+            <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <Button Margin="10,10,10,10" Width="100" Content="Сохранить" Click="Button_Click" Foreground="White" Background="Black"/>
+            <Button Content="Открыть" Margin="10,10,10,10" Width="100" Click="Button_Click_1" Foreground="White" Background="Black"/>
+            <Button Content="Очистить" Margin="10,10,10,10" Width="100" Click="Button_Click_2" Foreground="White" Background="Black"/>
+        </StackPanel>
+    </Grid>
+
+</Window>
